@@ -46,22 +46,6 @@ const watchScrollDirection = () =>
 
 export const SiteHeader = () => {
   const scrollDirection = useObservable(watchScrollDirection, 'UP')
-  if (localStorage.getItem('theme') === null) {
-    localStorage.setItem('theme', 'light')
-  }
-  const [themeChangeCallback, value] = useEventCallback(
-    $event =>
-      $event.pipe(
-        tap(() =>
-          localStorage.getItem('theme') === 'light'
-            ? localStorage.setItem('theme', 'dark')
-            : localStorage.setItem('theme', 'light')
-        ),
-        map(() => localStorage.getItem('theme')),
-        tap(console.log)
-      ),
-    localStorage.getItem('theme')
-  )
 
   return (
     <StaticQuery
