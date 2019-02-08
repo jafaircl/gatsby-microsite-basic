@@ -1,0 +1,46 @@
+@import "../../scss/sizes.scss";
+@import "../../scss/colors.scss";
+@import "../../scss/contrast.scss";
+
+@mixin remove-default {
+    display: block;
+    border: none;
+    padding: ($base-size-unit * .7 ) ($base-size-unit * 2);
+    border-radius: $base-size-unit / 3;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.solidPrimary {
+    @include remove-default();
+    background-color: $primary-color;
+    color: contrast($primary-color);
+}
+
+.solidAccent {
+    @include remove-default();
+    background-color: $accent-color;
+    color: contrast($accent-color);
+}
+
+.ghostPrimary {
+    @include remove-default();
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}
+
+.ghostAccent {
+    @include remove-default();
+    color: $accent-color;
+    border: 1px solid $accent-color;
+}

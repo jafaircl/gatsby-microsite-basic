@@ -1,0 +1,13 @@
+@import "../../scss/sizes.scss";
+
+.mainContent {
+    margin: $header-height auto;
+    padding: $base-size-unit / 2;
+    max-width: $max-content-width;
+}
+
+.header {
+    h1 {
+        padding-top: $base-size-unit;
+    }
+}

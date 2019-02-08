@@ -1,0 +1,15 @@
+@import "~@material/animation/functions";
+@import "../../scss/sizes.scss";
+
+.siteFooter {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: $header-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 0 $base-size-unit;
+    border-top: 1px solid rgb(223, 223, 223);
+}
